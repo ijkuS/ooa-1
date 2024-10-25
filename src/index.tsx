@@ -8,6 +8,7 @@ import AllProducts from './pages/AllProducts';
 import AddNewPage from './pages/AddNewPage';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
+import './styles/style.css';
 
 const router = createBrowserRouter([
     {
@@ -16,10 +17,10 @@ const router = createBrowserRouter([
         errorElement: <NotFound />,
         children: [
             { index: true, element: <App /> },
-            { path: './products', element: <AllProducts /> },
-            { path: './products/addnew', element: <AddNewPage /> },
-            { path: './products/:productId', element: <ProductDetail /> },
-            { path: './cart', element: <Cart /> },
+            { path: '/products', element: <AllProducts /> },
+            { path: '/products/addnew', element: <AddNewPage /> },
+            { path: '/products/:productId', element: <ProductDetail /> },
+            { path: '/cart', element: <Cart /> },
         ],
     },
 ]);

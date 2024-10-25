@@ -4,7 +4,8 @@ export default function Navbar() {
     return (
         <nav>
             <Link className="logo" to="/">
-                <h2>OOA</h2>
+                OOA
+                {/* <img src="./assets/ooa-log.svg" alt="ooa-logo" /> */}
             </Link>
             <menu>
                 <Link className="button" to="/products">

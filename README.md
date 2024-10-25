@@ -1,10 +1,10 @@
 # OOA Website - Work In Progress (WIP)
 
-OOA(OUT OF ALL) is a new e-commerce platform specializing in outdoor wear, launched by Joy Works, which also operates HOKA Korea.
+OOA is a new e-commerce platform specializing in outdoor wear, launched by Joy Works, which also operates HOKA Korea.
 
 This web development project focuses on seamlessly merging offline and online shopping experiences. It curates a diverse range of outdoor styles and lifestyle content, tackling challenges like booking limited editions, browsing personalized content, and streamlining payments. The aim is to improve the shopping experience for users, employees, and stores, positioning OOA as a leader in the outdoor lifestyle market.
 
-![](./assets/ux/ooa_UX-5.jpeg)
+![](./public/assets/ux/ooa_UX-5.jpeg)
 
 ## Table of contents
 
@@ -25,6 +25,7 @@ This web development project focuses on seamlessly merging offline and online sh
 
     -   [1. React environment without CRA](#1-react-environment-without-cracreate-react-app)
     -   [2. File structure setting](#2-file-structure-setting)
+    -   [3. Skeleton of application (Navbar + Outlet)](#3-skeleton-of-application-navbar--outlet)
 
     -   [git Tips: Delete a file from a Git repository](#git-tips-delete-a-file-from-a-git-repository)
     -   [SVG icon transformation](#svg-icon-transformation)
@@ -83,10 +84,10 @@ Add & Edit(A)
 #### App UX/UI Planning
 
 UX/UI Strategy
-![](./assets/ux/ooa_UX-1.jpeg)
-![](./assets/ux/ooa_UX-2.jpeg)
-![](./assets/ux/ooa_UX-3.jpeg)
-![](./assets/ux/ooa_UX-4.jpeg)
+![](./public/assets/ux/ooa_UX-1.jpeg)
+![](./public/assets/ux/ooa_UX-2.jpeg)
+![](./public/assets/ux/ooa_UX-3.jpeg)
+![](./public/assets/ux/ooa_UX-4.jpeg)
 
 **Large screen UI**
 
@@ -239,6 +240,26 @@ Details: [Basic interaction planning](#basic-interaction-planning)
 
 ```shell
    npm i react-router-dom
+```
+
+-   Initial page structure and file tree
+
+```
+    src
+    ┣ components
+    ┃ ┗ Navbar.tsx
+    ┣ pages
+    ┃ ┣ AddNewPage.tsx
+    ┃ ┣ AllProducts.tsx
+    ┃ ┣ Cart.tsx
+    ┃ ┣ NotFound.tsx
+    ┃ ┗ ProductDetail.tsx
+    ┣ routes
+    ┃ ┗ Root.tsx
+    ┣ styles
+    ┃ ┗ style.css
+    ┣ App.tsx
+    ┗ index.tsx
 ```
 
 ### git Tips: Delete a file from a Git repository
