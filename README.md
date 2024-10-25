@@ -4,40 +4,40 @@ OOA(OUT OF ALL) is a new e-commerce platform specializing in outdoor wear, launc
 
 This web development project focuses on seamlessly merging offline and online shopping experiences. It curates a diverse range of outdoor styles and lifestyle content, tackling challenges like booking limited editions, browsing personalized content, and streamlining payments. The aim is to improve the shopping experience for users, employees, and stores, positioning OOA as a leader in the outdoor lifestyle market.
 
-![](./public/assets/ux/ooa_UX-5.jpeg)
+![](.assets/ux/ooa_UX-5.jpeg)
 
 ## Table of contents
 
-- [Overview](#overview)
+-   [Overview](#overview)
 
-  - [Screenshot](#screenshot)
-  - [Goal](#goal)
-  - [Links](#links)
+    -   [Screenshot](#screenshot)
+    -   [Goal](#goal)
+    -   [Links](#links)
 
-- [My process](#my-process)
+-   [My process](#my-process)
 
-  - [Planning](#planning)
-    - [Basic interaction planning](#basic-interaction-planning)
-    - [Technical planning](#technical-planning)
+    -   [Planning](#planning)
+        -   [Basic interaction planning](#basic-interaction-planning)
+        -   [Technical planning](#technical-planning)
 
-- [Challenges and Lessons](#challenges-and-lessons)
+-   [Challenges and Lessons](#challenges-and-lessons)
 
-  - [1. React environment without CRA](#1-react-environment-without-cracreate-react-app)
+    -   [1. React environment without CRA](#1-react-environment-without-cracreate-react-app)
 
-- [Future Improvements](#future-improvements)
-- [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+-   [Future Improvements](#future-improvements)
+-   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-- This project began as a client request, and I am now recreating it as a new version to practice React.
-- This project serves as an exercise to deepen familiarity with React and object-oriented programming (OOP).
-- The project is designed as a web application.
+-   This project began as a client request, and I am now recreating it as a new version to practice React.
+-   This project serves as an exercise to deepen familiarity with React and object-oriented programming (OOP).
+-   The project is designed as a web application.
 
 ### Goal
 
-- User types: (A) Admins / (L) Logged-in user / (V) Visitors
+-   User types: (A) Admins / (L) Logged-in user / (V) Visitors
 
 Users should be able to:
 
@@ -45,31 +45,31 @@ Users should be able to:
 
 General
 
-- [ ] See all products on the main homepage (A, L, V)
-- [ ] See all product details (A, L, V)
-  - [ ] Add to bag button (A, L)
-- [ ] LocalStorage
+-   [ ] See all products on the main homepage (A, L, V)
+-   [ ] See all product details (A, L, V)
+    -   [ ] Add to bag button (A, L)
+-   [ ] LocalStorage
 
 SignUp & Bag(cart)
 
-- [ ] Login/Logout/SignUp (A, L, V)
-- [ ] Bag (A, L)
-  - [ ] Add products in a cart
+-   [ ] Login/Logout/SignUp (A, L, V)
+-   [ ] Bag (A, L)
+    -   [ ] Add products in a cart
 
 Add & Edit(A)
 
-- [ ] Add new product data
-- [ ] Edit existing product data
+-   [ ] Add new product data
+-   [ ] Edit existing product data
 
 **Good to have**
 
-- [ ] Search for a keyword
-- [ ] Toggle the color scheme between light and dark mode
+-   [ ] Search for a keyword
+-   [ ] Toggle the color scheme between light and dark mode
 
 ### Links
 
-- gitHub URL: [Noej Ijkus](https://github.com/ijkuS)
-- Live Site URL:
+-   gitHub URL: [Noej Ijkus](https://github.com/ijkuS)
+-   Live Site URL:
 
 ## My process
 
@@ -127,7 +127,7 @@ UX/UI Strategy
 
 #### Basic interaction planning
 
-- Site URL structure
+-   Site URL structure
 
 ```
    - /   -> <home>
@@ -137,9 +137,9 @@ UX/UI Strategy
    - /carts -> <Cart>
 ```
 
-- Navbar + Outlet structure (with React router)
-  - routes folder -> Root.jsx
-  - pages folder
+-   Navbar + Outlet structure (with React router)
+    -   routes folder -> Root.jsx
+    -   pages folder
 
 ```
 
@@ -155,11 +155,11 @@ UX/UI Strategy
 
 #### Technical planning
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Mobile-first workflow
-- [React](https://react.dev/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Mobile-first workflow
+-   [React](https://react.dev/)
+-   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Challenges and Lessons
 
@@ -175,10 +175,10 @@ Details: [Basic interaction planning](#basic-interaction-planning)
 
 ### SVG icon transformation
 
-- Select the desired icon from the React-Icons site, then open developer tools to save the SVG portion.
-- Search "SVG to ICO" or "PNG to ICO" on Google.
-- Use one of the sites to convert the file to ICO format and save it.
-- If it's an SVG file, you can modify the code to set or change the color as needed.
+-   Select the desired icon from the React-Icons site, then open developer tools to save the SVG portion.
+-   Search "SVG to ICO" or "PNG to ICO" on Google.
+-   Use one of the sites to convert the file to ICO format and save it.
+-   If it's an SVG file, you can modify the code to set or change the color as needed.
 
 ## Future Improvements
 
@@ -186,25 +186,25 @@ Details: [Basic interaction planning](#basic-interaction-planning)
 
 **Design References**
 
-- [Google design guidelines for developers](https://developers.google.com/assistant/interactivecanvas/design)
-- [Google Material 3](https://m3.material.io/)
-- [CSS Box shadow examples](https://getcssscan.com/css-box-shadow-examples)
+-   [Google design guidelines for developers](https://developers.google.com/assistant/interactivecanvas/design)
+-   [Google Material 3](https://m3.material.io/)
+-   [CSS Box shadow examples](https://getcssscan.com/css-box-shadow-examples)
 
-- [Google color palette](https://partnermarketinghub.withgoogle.com/brands/google-news/visual-identity/color-palette/)
-- [TailwindCSS color palette](https://tailwindcss.com/docs/customizing-colors)
-- [material ui](https://materialui.co/colors)
+-   [Google color palette](https://partnermarketinghub.withgoogle.com/brands/google-news/visual-identity/color-palette/)
+-   [TailwindCSS color palette](https://tailwindcss.com/docs/customizing-colors)
+-   [material ui](https://materialui.co/colors)
 
 **VSC Tips**
 
-- [Multi selections](https://code.visualstudio.com/docs/editor/codebasics)
+-   [Multi selections](https://code.visualstudio.com/docs/editor/codebasics)
 
 **Git Tips**
 
-- [Terminal markdown](https://github.com/Evoniuk/terminal-markdown)
+-   [Terminal markdown](https://github.com/Evoniuk/terminal-markdown)
 
 ## Author
 
-- [Noej Ijkus](https://github.com/ijkuS)
-- [email](ijkus.noej@gmail.com)
+-   [Noej Ijkus](https://github.com/ijkuS)
+-   [email](ijkus.noej@gmail.com)
 
 ## Acknowledgments
