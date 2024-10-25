@@ -17,12 +17,17 @@ This web development project focuses on seamlessly merging offline and online sh
 -   [My process](#my-process)
 
     -   [Planning](#planning)
+        -   [App UX/UI planning](#app-uxui-planning)
         -   [Basic interaction planning](#basic-interaction-planning)
         -   [Technical planning](#technical-planning)
 
 -   [Challenges and Lessons](#challenges-and-lessons)
 
     -   [1. React environment without CRA](#1-react-environment-without-cracreate-react-app)
+    -   [2. File structure setting](#2-file-structure-setting)
+
+    -   [git Tips: Delete a file from a Git repository](#git-tips-delete-a-file-from-a-git-repository)
+    -   [SVG icon transformation](#svg-icon-transformation)
 
 -   [Future Improvements](#future-improvements)
 -   [Useful resources](#useful-resources)
@@ -83,23 +88,72 @@ UX/UI Strategy
 ![](./assets/ux/ooa_UX-3.jpeg)
 ![](./assets/ux/ooa_UX-4.jpeg)
 
+**Large screen UI**
+
+-   Landing page
+
 ```
-* large screen UI
--    header / navbar
-     -   Logo
-     -   Bag
-     -   SignUp(Login/Logout)
-     -   User info (profile icon + name)
+-    header (navbar)
+     -   Logo -> onclick: homepage
 
      -   New Arrivals
      -   Products
      -   Brands
      -   Sales
--    main
-     -    list of products
+
+     -   Edit -> onclick: /products/addNew -- (A only)
+     -   Bag -> onclick: /cart -- (A, L)
+     -   User info (profile icon + name) -- (A, L)
+     -   SignUp(Login/Logout)
+
+-    main (Outlet part)
+     -   banners or movieclips
+     -   product card grid layout
+
 -    footer
      -    brand and website information
+```
 
+-   Detail page
+
+for logged-in users and visitors
+
+```
+-    Outlet part
+     -   left: product images
+     -   right:
+         -  product name
+         -  category
+         -  price
+         -  description
+         -  option buttons
+         -  decalaimer
+         -  button: Add to bag
+
+-    footer
+     -    brand and website information
+```
+
+-   Add new product / Edit existing product
+
+for admins
+
+```
+-    Outlet part
+     -   left: multiple image preview of chosen file
+     -   right:
+         -  input: choose files (multiple files)
+         -  input: product name
+         -  input: price
+         -  input: Category
+         -  input: Description
+         -  input: Options(separted by commas) / or set a dropdown menu
+         -  button: Click to Upload
+```
+
+**Mobile UI**
+
+```
 * mobile UI
 
 -    header / navbar
@@ -137,7 +191,7 @@ UX/UI Strategy
    - /carts -> <Cart>
 ```
 
--   Navbar + Outlet structure (with React router)
+-   Navbar + Outlet structure (with [React router DOM](https://reactrouter.com/en/main/start/overview))
     -   routes folder -> Root.jsx
     -   pages folder
 
@@ -160,18 +214,54 @@ UX/UI Strategy
 -   Mobile-first workflow
 -   [React](https://react.dev/)
 -   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+-   [TypeScript]
+
+-   [Tanstack Router](https://tanstack.com/router/latest)
+-   [React Router DOM](https://www.npmjs.com/package/react-router-dom)
+-   [React Router](https://reactrouter.com/en/main)
+-   Firebase
+    -   authentification
+    -   database
 
 ## Challenges and Lessons
 
 ### 1. React environment without CRA(Create-React-App)
 
-I build React environment setting without CRA to understand how each library and file work.
-
-To read more, please check the file [**README-setting**](./README-setting.md)
+I build React environment setting without CRA to understand how each library and file work. To read more, please check the file [**README-setting**](./README-setting.md)
 
 ### 2. File structure setting
 
 Details: [Basic interaction planning](#basic-interaction-planning)
+
+### 3. Skeleton of application (Navbar + Outlet)
+
+-   Install React router dom for using 'Navbar + Outlet' structure
+
+```shell
+   npm i react-router-dom
+```
+
+### git Tips: Delete a file from a Git repository
+
+[Reference](https://sentry.io/answers/delete-a-file-from-a-git-repository/)
+
+case: Remove a file or folder on the remote only
+
+```shell
+   git rm --cached unwanted-file.txt
+   git commit -m "remove unnecessary files"
+   git push origin main
+
+```
+
+case: Remove a file or folder from the local
+
+```shell
+   git rm unwanted-file.txt
+   git commit -m "remove unnecessary files"
+   git push origin main
+
+```
 
 ### SVG icon transformation
 
@@ -197,6 +287,40 @@ Details: [Basic interaction planning](#basic-interaction-planning)
 **VSC Tips**
 
 -   [Multi selections](https://code.visualstudio.com/docs/editor/codebasics)
+-   VSC, Global code snippets: command palette -> snippet -> Global code snippets
+
+command palette -> snippet -> Global code snippets
+snippets.code-snippets
+
+```json
+{
+    "reactFunction": {
+        "prefix": "rfc",
+        "body": "import React from 'react';\n\nexport default function ${1:${TM_FILENAME_BASE}}() {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\n",
+        "description": "Creates a React Function component"
+    },
+    "reactStatelessImplicitReturn": {
+        "prefix": "rsi",
+        "body": "import React from 'react';\n\nexport const ${1:${TM_FILENAME_BASE}} = (props) => (\n\t\t\t$0\n\t);",
+        "description": "Creates a React Function component"
+    },
+    "Import Module CSS": {
+        "prefix": "si",
+        "body": ["import styles from './$TM_FILENAME_BASE.module.css'"],
+        "description": "Import PostCSS"
+    },
+    "ClassName": {
+        "prefix": "cn",
+        "body": ["className="],
+        "description": "Adding className"
+    }
+    // "ClassName": {
+    //     "prefix": "cn",
+    //     "body": ["className={styles.$1}"],
+    //     "description": "Adding className"
+    // }
+}
+```
 
 **Git Tips**
 
