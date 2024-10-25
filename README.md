@@ -4,7 +4,7 @@ OOA(OUT OF ALL) is a new e-commerce platform specializing in outdoor wear, launc
 
 This web development project focuses on seamlessly merging offline and online shopping experiences. It curates a diverse range of outdoor styles and lifestyle content, tackling challenges like booking limited editions, browsing personalized content, and streamlining payments. The aim is to improve the shopping experience for users, employees, and stores, positioning OOA as a leader in the outdoor lifestyle market.
 
-![](.assets/ux/ooa_UX-5.jpeg)
+![](./assets/ux/ooa_UX-5.jpeg)
 
 ## Table of contents
 
