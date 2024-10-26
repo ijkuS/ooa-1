@@ -26,6 +26,7 @@ This web development project focuses on seamlessly merging offline and online sh
     -   [1. React environment without CRA](#1-react-environment-without-cracreate-react-app)
     -   [2. File structure setting](#2-file-structure-setting)
     -   [3. Skeleton of application (Navbar + Outlet)](#3-skeleton-of-application-navbar--outlet)
+    -   [4. Authentication with Firebase]
 
     -   [git Tips: Delete a file from a Git repository](#git-tips-delete-a-file-from-a-git-repository)
     -   [SVG icon transformation](#svg-icon-transformation)
@@ -220,7 +221,7 @@ for admins
 -   [Tanstack Router](https://tanstack.com/router/latest)
 -   [React Router DOM](https://www.npmjs.com/package/react-router-dom)
 -   [React Router](https://reactrouter.com/en/main)
--   Firebase
+-   [Firebase](https://firebase.google.com/)
     -   authentification
     -   database
 
@@ -261,6 +262,23 @@ Details: [Basic interaction planning](#basic-interaction-planning)
     ┣ App.tsx
     ┗ index.tsx
 ```
+
+### 4. Authentification with Firebase
+
+-   Install [Firebase](https://firebase.google.com/) -> Create `fbase.js`(src > api > fbase.js)
+
+    -   **Important**: Refrain from using the name "firebase.js." to avoid potential conflicts with other files
+
+-   Build firebase authentication following the [guide](https://firebase.google.com/docs/build?authuser=0&%3Bhl=ko&hl=ko&_gl=1*1idhrwr*_up*MQ..*_ga*NTQwNTQwNTgzLjE3Mjk4OTg5NDE.*_ga_CW55HF8NVT*MTcyOTkwMTYxMS4yLjEuMTcyOTkwMjgwOS4xNC4wLjA.)
+
+-   `fbase.ts`: Protect important keys putting in `.env.local` (apiKey, authDomain, databaseURL, projectId, appId)
+    -   function login / logout
+    -   Manage Users in Firebase
+    -   (Authentication state)
+
+### 5. Login & logout functions with UI
+
+-   [firebase google login build document](https://firebase.google.com/docs/auth/web/google-signin?hl=ko&authuser=0&_gl=1*1bzde14*_up*MQ..*_ga*NTQwNTQwNTgzLjE3Mjk4OTg5NDE.*_ga_CW55HF8NVT*MTcyOTkwMTYxMS4yLjEuMTcyOTkwMjk0Mi4wLjAuMA..)
 
 ### git Tips: Delete a file from a Git repository
 

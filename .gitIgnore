@@ -3,5 +3,7 @@ node_modules/
 
 .env
 .env.production
+.env.local
+
 .eslintrc.cjs
 .prettierrc
