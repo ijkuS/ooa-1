@@ -272,13 +272,20 @@ Details: [Basic interaction planning](#basic-interaction-planning)
 -   Build firebase authentication following the [guide](https://firebase.google.com/docs/build?authuser=0&%3Bhl=ko&hl=ko&_gl=1*1idhrwr*_up*MQ..*_ga*NTQwNTQwNTgzLjE3Mjk4OTg5NDE.*_ga_CW55HF8NVT*MTcyOTkwMTYxMS4yLjEuMTcyOTkwMjgwOS4xNC4wLjA.)
 
 -   `fbase.ts`: Protect important keys putting in `.env.local` (apiKey, authDomain, databaseURL, projectId, appId)
+
     -   function login / logout
     -   Manage Users in Firebase
-    -   (Authentication state)
-
-### 5. Login & logout functions with UI
+    -   funtion for [Authentication state](https://firebase.google.com/docs/auth/web/start?hl=ko&authuser=0&_gl=1*11jfqco*_up*MQ..*_ga*NTQwNTQwNTgzLjE3Mjk4OTg5NDE.*_ga_CW55HF8NVT*MTcyOTkwMTYxMS4yLjEuMTcyOTkwMjk0Mi4wLjAuMA..)
 
 -   [firebase google login build document](https://firebase.google.com/docs/auth/web/google-signin?hl=ko&authuser=0&_gl=1*1bzde14*_up*MQ..*_ga*NTQwNTQwNTgzLjE3Mjk4OTg5NDE.*_ga_CW55HF8NVT*MTcyOTkwMTYxMS4yLjEuMTcyOTkwMjk0Mi4wLjAuMA..)
+
+-   Issue: Due the type checking of TypeScript, I had to change the firebase API into TS, need to handle better between login and logout user state.
+
+-   **Solution**: Build authentication with email option and make interface of user data and state to handle efficiently
+
+[Ref: Implementing Firebase auth in React js, Typescript, Vite js](https://medium.com/@sajadshafi/implementing-firebase-auth-in-react-js-typescript-vite-js-88465ac84170)
+
+### 5. Login & logout functions with UI (Navbar button)
 
 ### git Tips: Delete a file from a Git repository
 
@@ -310,6 +317,13 @@ case: Remove a file or folder from the local
 -   If it's an SVG file, you can modify the code to set or change the color as needed.
 
 ## Future Improvements
+
+-   Q. For API, is it okay to use JavaScript file, or need to change into TypeScript file?
+
+Due the type checking of TypeScript, I had to change the firebase API into TS, need to handle better between login and logout user state.
+
+[Ref: Implementing Firebase auth in React js, Typescript, Vite js](https://medium.com/@sajadshafi/implementing-firebase-auth-in-react-js-typescript-vite-js-88465ac84170)
+[Ref: Implementing Firebase auth with Typescript](https://ph-biginner.tistory.com/180)
 
 ## Useful resources
 

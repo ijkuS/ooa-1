@@ -1,6 +1,23 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { OnUserStateChange, login, logout } from '../api/fbase-config.js';
 
 export default function Navbar() {
+    // set a user
+    const [user, setUser] = useState();
+    const handleLogin = () => {
+        login().then(setUser);
+    };
+    const handleLogout = () => {
+        logout().then(setUser);
+    };
+    useEffect(() => {
+        OnUserStateChange((user) => {
+            console.log(user);
+            setUser(user);
+        });
+    }, []);
+
     return (
         <nav>
             <Link className="logo" to="/">
@@ -17,7 +34,16 @@ export default function Navbar() {
                 <Link className="button" to="/products/addnew">
                     Edit
                 </Link>
-                <a className="button">SIGN IN</a>
+                {!user && (
+                    <button onClick={handleLogin} className="button">
+                        Login
+                    </button>
+                )}
+                {user && (
+                    <button onClick={handleLogout} className="button">
+                        Logout
+                    </button>
+                )}
             </menu>
         </nav>
     );
